@@ -7,5 +7,15 @@
     under construction
   <script type="text/javascript">
     <!–– pyodide code here -->
+    async function main() {
+  let pyodide = await loadPyodide({ indexURL : "https://cdn.jsdelivr.net/pyodide/v0.19.1/full/" });
+  // Pyodide is now ready to use...
+  console.log(pyodide.runPython(`
+    import sys
+    sys.version
+  `));
+};
+main();
+    
   </body>
 </html>
