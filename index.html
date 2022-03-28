@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <script src="https://cdn.jsdelivr.net/pyodide/v0.19.1/full/pyodide.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript">
+      // set the Pyodide files URL (packages.json, pyodide.asm.data etc)
+      window.languagePluginUrl =
+        "https://cdn.jsdelivr.net/pyodide/v0.16.1/full/";
+    </script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.16.1/full/pyodide.js"></script>
   </head>
   <body>
-    under construction
-  <script type="text/javascript">
-    <!–– pyodide code here -->
-    async function main() {
-  let pyodide = await loadPyodide({ indexURL : "https://cdn.jsdelivr.net/pyodide/v0.19.1/full/" });
-  // Pyodide is now ready to use...
-  console.log(pyodide.runPython(`
-    import sys
-    sys.version
-  `));
-};
-main();
-    
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Video Downloader</h1>
+        <input class="input" type="text"></input>
+        <button class="button is-primary" onclick="doThing()">Submit</button>
+      </div>
+    </section>
+    <script type="text/javascript">
+      languagePluginLoader.then(function() {
+        console.log("Ready!");
+      });
+      
+      
+    </script>
   </body>
 </html>
