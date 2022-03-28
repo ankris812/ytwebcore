@@ -24,7 +24,14 @@
       languagePluginLoader.then(function() {
         console.log("Ready!");
       });
-      
+	  
+      function doThing(){
+        pyodide.runPythonAsync(
+          `
+          
+          `
+        );
+      }
       
     </script>
   </body>
